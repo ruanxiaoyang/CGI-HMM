@@ -1,0 +1,39 @@
+GetProb(LOCAL)                                                  GetProb(LOCAL)
+
+
+
+NNAAMMEE
+       GetProb - Calculate initial and transition probability for CGI-HMM
+
+SSYYNNOOPPSSIISS
+       GGeettPPrroobb [[ooppttiioonnss]] _-_s _-_p _-_o _-_h
+
+AAVVAAIILLAABBIILLIITTYY
+       Unix
+
+DDEESSCCRRIIPPTTIIOONN
+       Generate  .hmm  file  for  CGI-HMM. Need a single fasta format sequence
+       file and a two-column position file  with  1st  column  containing  CGI
+       start  position  and  2nd  column containing CGI end position. This can
+       usually be obtained from some fixed window based CGI finder program.
+
+UUSSAAGGEE
+       Need two input files ./GetProb -s [seqfile.fasta] -p [position file]
+
+OOPPTTIIOONNSS
+       -s [seqfile.fasta] the fasta format sequence  to  be  analyzed.  Should
+       only contain one sequence.
+
+       -p [position file] a two column file like
+              100 1000 2000 2450
+
+       -o [filename] the output file name (default is "res.hmm").
+
+       -h open this help file
+
+AAUUTTHHOORR
+       Xiaoyang Ruan
+
+
+
+                                                                GetProb(LOCAL)

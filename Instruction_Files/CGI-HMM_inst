@@ -1,0 +1,33 @@
+.TH CGI-HMM
+.SH NAME
+CGI-HMM - Genome scale CpG island finder by Hidden-Markov Model
+.SH SYNOPSIS
+.B CGI-HMM [options]
+.I -p -s -l -c -r -o -S -h
+.SH AVAILABILITY
+Unix
+.SH DESCRIPTION
+CGI-HMM uses Hidden-Markov Model to locate CpG island from fasta format sequence file. The initial and transition probability are pre-calculated and stored in prob.hmm -- Or can be calculated by running GetProb module in the package. For more details about the algorithm, read the attached "Hmm find CpG island.pdf".
+.SH SYSTEM REQUIREMENT
+Passed test on 32bit Ubuntu with 2G memory. Recommend 64bit system with >=2G memory. 
+.SH USAGE
+Simply call ./CGI-HMM -s [seqfile.fasta] to work with default values.
+.SH OPTIONS
+.TP
+-p [filename.hmm] use custom transition probability file. Default is "prob.hmm".
+.TP
+-s [seqfile.fasta] the fasta format sequence to be analyzed. Support multiple fasta sequences in one file
+.TP
+-l [integer] the length threshold (default=0). CGI with length smaller than this will be omitted.
+.TP
+-c [0~1] the GC proportion threshold (default=0.5). CGI with GC proportion smaller than this will be omitted.
+.TP
+-r [0~1] the Observed/Expected CpG count (default=0.6). CGI with OEratio smaller than this will be omitted.
+.TP
+-o [prefixname] prefix name of output (default is "CGIres").
+.TP
+-S set leftmost postion to 0. By default, the program set leftmost position to 1
+.TP
+-h open this help file
+.SH AUTHOR
+Xiaoyang Ruan
