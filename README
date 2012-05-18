@@ -1,0 +1,14 @@
+Run
+$ make
+to compile. This generates 2 executable programs in the working folder
+./CGI-HMM
+./GetProb
+
+For help, type "-h" after each program name
+
+System requirement
+Passed test (whole genome) on 32bit ubuntu with 2G memory. Recommend 64bit system with >=2G memory
+
+Report any error to
+Ruan,Xiaoyang
+ruansun@163.com
